@@ -1,24 +1,114 @@
-Skip to content
-Consultaextra
-Repository navigation
-Code
-Issues
-Settings
-Consultaextra
-/index.html
-mateussaradarosa-design
-mateussaradarosa-design
-8 minutes ago
-386 lines (357 loc) · 9.5 KB
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultoria Estratégica em Comunicação Interna</title>
 
-Code
+<!-- SEO Básico -->
+<meta name="description" content="Consultoria Estratégica em Comunicação Interna: Transformamos comunicação organizacional em vantagem competitiva.">
+<meta name="keywords" content="consultoria, comunicação interna, engajamento, treinamentos, campanhas internas">
+<meta name="author" content="Félix Cabanga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mateussaradarosa-design.github.io/Consultaextra/">
 
-Blame
-Older
-Newer
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="Consultoria Estratégica em Comunicação Interna">
+<meta property="og:description" content="Transformamos comunicação organizacional em vantagem competitiva.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mateussaradarosa-design.github.io/Consultaextra/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=1500&q=80">
 
-Create index.html
-8 minutes ago
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial,sans-serif;
+    color:#333;
+    scroll-behavior:smooth;
+    background:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=1500&q=80') no-repeat center center/cover;
+}
+/* HEADER */
+header{
+    background:rgba(31,41,55,0.85);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+header h1{font-size:32px;margin-bottom:10px;}
+header p{font-size:18px;}
+/* NAV */
+nav{
+    background:#111827;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+nav a{
+    color:white;
+    padding:14px 18px;
+    text-decoration:none;
+    transition:.3s;
+}
+nav a:hover{background:#374151}
+/* SECTIONS */
+section{
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
+    background:rgba(255,255,255,0.95);
+    border-radius:12px;
+    margin-top:30px;
+}
+h2{margin-bottom:25px;text-align:center;}
+/* CARDS */
+.cards{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    transition:all 0.4s ease;
+    text-align:center;
+    transform:translateY(30px);
+    opacity:0;
+}
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+}
+.card h3{
+    color:#1f2937;
+    margin-bottom:10px;
+}
+.card p{
+    font-size:14px;
+    color:#555;
+}
+/* FORM */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:20px;
+    max-width:500px;
+    margin:auto;
+}
+input,textarea{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    width:100%;
+}
+form button{
+    background:#1f2937;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:8px;
     cursor:pointer;
 }
 form button:hover{background:#374151;}
@@ -31,7 +121,6 @@ form button:hover{background:#374151;}
     color:#065f46;
     text-align:center;
 }
-
 /* FOOTER */
 footer{
     background:#111827;
@@ -46,7 +135,6 @@ footer a{
     text-decoration:none;
 }
 footer a:hover{color:white;}
-
 /* MODAL */
 .modal{
     display:none;
@@ -79,6 +167,227 @@ footer a:hover{color:white;}
 .cta{
     display:block;
     margin-top:20px;
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:12px;
+    border-radius:8px;
+    text-decoration:none;
+}
+/* BOTÕES FLUTUANTES */
+.float-buttons{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    z-index:2000;
+}
+.float-buttons a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    color:white;
+    font-size:22px;
+    text-decoration:none;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+.float-buttons .whatsapp{background:#25D366;}
+.float-buttons .facebook{background:#4267B2;}
+/* ANIMAÇÃO DE REVELAÇÃO */
+.reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 0.6s ease;
+}
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+/* RESPONSIVO */
+@media(min-width:800px){.cards{flex-direction:row;}}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Consultoria Estratégica em Comunicação Interna</h1>
+<p>Transformamos comunicação organizacional em vantagem competitiva</p>
+</header>
+
+<nav>
+<a href="#servicos">Serviços</a>
+<a href="#propostas">Propostas</a>
+<a href="#contato">Contato</a>
+</nav>
+
+<section id="servicos">
+<h2>Nossos Serviços</h2>
+<div class="cards">
+<div class="card reveal">
+<h3>Consultoria Estratégica</h3>
+<p>Diagnóstico e reestruturação da comunicação organizacional.</p>
+<button onclick="openModal('consultoria')">Saiba Mais</button>
+</div>
+<div class="card reveal">
+<h3>Treinamentos Corporativos</h3>
+<p>Capacitação prática para líderes e equipas.</p>
+<button onclick="openModal('treinamento')">Saiba Mais</button>
+</div>
+<div class="card reveal">
+<h3>Campanhas Internas</h3>
+<p>Projetos estratégicos de engajamento e cultura.</p>
+<button onclick="openModal('campanha')">Saiba Mais</button>
+</div>
+</div>
+</section>
+
+<section id="propostas">
+<h2>Nossas Propostas</h2>
+<div class="cards">
+<div class="card reveal" style="border-top:4px solid #25D366;">
+<h3>Plano Básico</h3>
+<p>Consultoria inicial para diagnóstico rápido e recomendações estratégicas.</p>
+</div>
+<div class="card reveal" style="border-top:4px solid #1f2937;">
+<h3>Plano Avançado</h3>
+<p>Consultoria completa, treinamento da equipe e acompanhamento mensal.</p>
+</div>
+<div class="card reveal" style="border-top:4px solid #4267B2;">
+<h3>Plano Premium</h3>
+<p>Projetos estratégicos completos, campanhas internas e suporte personalizado.</p>
+</div>
+</div>
+</section>
+
+<section id="contato">
+<h2>Solicite uma Proposta</h2>
+<form id="proposalForm">
+<input type="text" id="nome" placeholder="Digite o seu Nome" required>
+<input type="number" id="Numero" placeholder="Digite seu número de telefone" required>
+<input type="email" id="email" placeholder="Digite o seu Email" required>
+<input type="text" id="empresa" placeholder="Digite o nome da sua Empresa" required>
+<textarea id="mensagem" placeholder="Descreva a sua necessidade" required></textarea>
+<button type="submit">Enviar Solicitação</button>
+</form>
+<div class="confirmacao" id="confirmacao">Solicitação enviada com sucesso. Entraremos em contato em breve.</div>
+</section>
+
+<footer>
+<p>© 2026 Consultoria Comunicação Interna. Todos os direitos reservados. Félix Cabanga</p>
+<div>
+<a href="#" onclick="openModal('termos')">Termos e Condições</a>
+<a href="#" onclick="openModal('privacidade')">Política de Privacidade</a>
+</div>
+<div style="margin-top:10px;">
+<a href="https://www.facebook.com/felix.osvaldo.manuel" target="_blank">Facebook</a>
+<a href="https://wa.me/244927095958" target="_blank">WhatsApp</a>
+</div>
+</footer>
+
+<!-- MODAIS -->
+<div id="consultoria" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('consultoria')">X</span>
+<h3>Consultoria Estratégica</h3>
+<ul>
+<li>Diagnóstico completo da comunicação interna</li>
+<li>Plano estratégico personalizado</li>
+<li>Indicadores de desempenho (KPIs)</li>
+<li>Acompanhamento executivo</li>
+</ul>
+<a href="#contato" class="cta" onclick="goToContact()">Solicitar Proposta</a>
+</div>
+</div>
+
+<div id="treinamento" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('treinamento')">X</span>
+<h3>Treinamentos Corporativos</h3>
+<ul>
+<li>Comunicação para liderança</li>
+<li>Gestão de conflitos</li>
+<li>Alinhamento estratégico</li>
+<li>Workshops práticos</li>
+</ul>
+<a href="#contato" class="cta" onclick="goToContact()">Solicitar Proposta</a>
+</div>
+</div>
+
+<div id="campanha" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('campanha')">X</span>
+<h3>Campanhas Internas</h3>
+<ul>
+<li>Campanhas de cultura organizacional</li>
+<li>Endomarketing estratégico</li>
+<li>Projetos de mudança comportamental</li>
+</ul>
+<a href="#contato" class="cta" onclick="goToContact()">Solicitar Proposta</a>
+</div>
+</div>
+
+<div id="termos" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('termos')">X</span>
+<h3>Termos e Condições</h3>
+<p>Ao acessar este site, o usuário concorda com os termos aqui estabelecidos.</p>
+</div>
+</div>
+
+<div id="privacidade" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('privacidade')">X</span>
+<h3>Política de Privacidade</h3>
+<p>Coletamos apenas dados fornecidos voluntariamente para fins de contato.</p>
+</div>
+</div>
+
+<!-- BOTÕES FLUTUANTES -->
+<div class="float-buttons">
+<a href="https://wa.me/244927095958" class="whatsapp" target="_blank">💬</a>
+<a href="https://www.facebook.com/felix.osvaldo.manuel" class="facebook" target="_blank">f</a>
+</div>
+
+<script>
+// MODAIS
+function openModal(id){document.getElementById(id).style.display="flex";}
+function closeModal(id){document.getElementById(id).style.display="none";}
+function goToContact(){
+    document.querySelectorAll(".modal").forEach(m=>m.style.display="none");
+    setTimeout(()=>{document.getElementById("contato").scrollIntoView({behavior:"smooth"});document.getElementById("nome").focus();},300);
+}
+
+// Fecha modal clicando fora
+window.onclick=function(e){if(e.target.classList.contains("modal")) e.target.style.display="none";}
+
+// FORMULÁRIO
+document.getElementById("proposalForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("confirmacao").style.display="block";
+    this.reset();
+});
+
+// ANIMAÇÃO REVEAL
+function revealCards(){
+    const cards = document.querySelectorAll('.card.reveal');
+    cards.forEach(card=>{
+        let top = card.getBoundingClientRect().top;
+        let windowHeight = window.innerHeight;
+        if(top < windowHeight - 100){card.classList.add('active');}
+    });
+}
+window.addEventListener('scroll',revealCards);
+window.addEventListener('load',revealCards);
+</script>
+
+</body>
+</html>    margin-top:20px;
     background:#1f2937;
     color:white;
     text-align:center;
