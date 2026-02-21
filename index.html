@@ -208,24 +208,4 @@ this.reset();
 </script>
 
 </body>
-</html>ventListener("submit", function(e){
-    e.preventDefault();
-    document.getElementById("confirmacao").style.display="block";
-    this.reset();
-});
-
-// ANIMAÇÃO REVEAL
-function revealCards(){
-    const cards = document.querySelectorAll('.card.reveal');
-    cards.forEach(card=>{
-        let top = card.getBoundingClientRect().top;
-        let windowHeight = window.innerHeight;
-        if(top < windowHeight - 100){card.classList.add('active');}
-    });
-}
-window.addEventListener('scroll',revealCards);
-window.addEventListener('load',revealCards);
-</script>
-
-</body>
 </html>
